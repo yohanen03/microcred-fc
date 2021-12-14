@@ -51,12 +51,12 @@ train_datagen = ImageDataGenerator(rescale = 1./255, # To rescaling the image in
 
 test_datagen = ImageDataGenerator(rescale = 1./255)
 print("\nTraining the data...\n")
-training_set = train_datagen.flow_from_directory('train',
+training_set = train_datagen.flow_from_directory('C:/Users/ASUS/Documents/TUGAS AKHIR AI/FIX5/train',
                                                 target_size=(64,64),
                                                 batch_size=12, #Total no. of batches
                                                 class_mode='categorical')
 
-test_set = test_datagen.flow_from_directory('test',
+test_set = test_datagen.flow_from_directory('C:/Users/ASUS/Documents/TUGAS AKHIR AI/FIX5/val',
                                             target_size=(64,64),
                                             batch_size=12,
                                             class_mode='categorical')
