@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-classes = ['Fresh Apple','Fresh Banana','Fresh Guava','Rotten Apple','Rotten Banana','Rotten Guava']
+classes = ['Fresh Apple','Fresh Banana','Fresh Orange','Rotten Apple','Rotten Banana','Rotten Orange']
 
 @app.route("/")
 def index():
@@ -60,5 +60,5 @@ def send_image(filename):
     return send_from_directory("images", filename)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
 
